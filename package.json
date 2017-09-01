@@ -19,5 +19,18 @@
   "bugs": {
     "url": "https://github.com/sethb0/bunyan-fluent-stream/issues"
   },
-  "homepage": "https://github.com/sethb0/bunyan-fluent-stream#readme"
+  "homepage": "https://github.com/sethb0/bunyan-fluent-stream#readme",
+  "peerDependencies": {
+    "bunyan": "^1.8.12"
+  },
+  "dependencies": {
+    "json-stringify-safe": "^5.0.1",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "@sethb0/eslint-config-mfllc": "^0.2.0",
+    "babel-eslint": "^7.2.3",
+    "bunyan": "^1.8.12",
+    "eslint": "^4.5.0"
+  }
 }
