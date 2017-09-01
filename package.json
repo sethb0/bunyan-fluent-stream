@@ -1,0 +1,23 @@
+{
+  "name": "@sethb0/bunyan-fluent-stream",
+  "version": "0.1.0",
+  "description": "Bunyan logging stream to fluentd's in_forward port",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethb0/bunyan-fluent-stream.git"
+  },
+  "keywords": [
+    "bunyan",
+    "fluentd"
+  ],
+  "author": "Seth Blumberg <sethb@pobox.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sethb0/bunyan-fluent-stream/issues"
+  },
+  "homepage": "https://github.com/sethb0/bunyan-fluent-stream#readme"
+}
