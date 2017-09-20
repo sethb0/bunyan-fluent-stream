@@ -7,8 +7,8 @@ const { Writable } = require('stream');
 class BunyanFluentStream extends Writable {
   constructor (options) {
     super({ objectMode: true });
-    this.host = options.host || 'localhost';
-    this.port = options.port || 24224;
+    this.host = (options || {}).host || 'localhost';
+    this.port = (options || {}).port || 24224;
   }
 
   _write (chunk, enc, cb) {
