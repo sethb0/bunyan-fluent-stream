@@ -24,7 +24,7 @@ class BunyanFluentStream extends Writable {
       this._socket.once('error', onError);
       let tag;
       try {
-        const ch0 = chunks[0];
+        const ch0 = chunks[0].chunk;
         tag = `bunyan.${ch0.name}@${ch0.hostname}:${ch0.pid}`;
       } catch (err) {
         // drop the whole buffer
@@ -34,10 +34,8 @@ class BunyanFluentStream extends Writable {
       const record = [tag, chunks.map(({ chunk }) => {
         let data;
         try {
-          const ch = Object.assign({}, chunk);
-          const time = moment.utc(ch.time).unix();
-          ch.time = undefined;
-          data = [time, ch];
+          const time = moment.utc(chunk.time).unix();
+          data = [time, chunk];
         } catch (err) {
           // drop the chunk and move on
         }
